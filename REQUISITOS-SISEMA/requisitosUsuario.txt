@@ -1,0 +1,9 @@
+Requisitos de gerenciamento de usuário.
+
+- O usuário necessita se cadastrar no sistema com as seguintes informações: 
+        - Nome, CPF, data de nascimento, sexo, telefone, email, endereço.
+- O usuário pode atualizar as informações de cadastro.
+- O usuário pode consultar suas informações de cadastro.
+- O usuário deve possuir perfil de acesso.
+- O perfil do usuário deve possuir acessos a determinados assuntos.
+- O usuário deve fazer a autenticação dele no sistema.
