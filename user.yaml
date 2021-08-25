@@ -1,0 +1,112 @@
+swagger: "2.0"
+info:
+  description: "O objetivo do serviço é fazer gerenciamento do usuário"
+  version: "1.0.0"
+  title: "Swagger Core Usuário"
+  contact:
+    email: "apiteam@swagger.io"
+host: "petstore.swagger.io"
+basePath: "/v2"
+schemes:
+- "https"
+- "http"
+paths:
+  /:
+    post:
+      tags:
+      - "user"
+      summary: "Adicionar um novo usuário"
+      description: "O objetivo do endpoint é adicionar um novo usuário ao sistema"
+      operationId: "addUser"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "userInput"
+        description: "User object that needs to be added to the system"
+        required: true
+        schema:
+          $ref: "#/definitions/UserInput"
+      responses:
+        "201":
+          description: "Created"
+          schema:
+            $ref: "#/definitions/User"
+        "404":
+          description: "Bad request"
+        "405":
+          description: "Invalid input"
+definitions:
+  User:
+    type: "object"
+    properties:
+      userId:
+        type: "integer"
+        format: "int64"
+      cpf:
+        type: "string"
+      username:
+        type: "string"
+      firstName:
+        type: "string"
+      lastName:
+        type: "string"
+      email:
+        type: "string"
+      password:
+        type: "string"
+      phone:
+        type: "string"
+      birthday:
+        type: "string"
+      postalCode: 
+        type: "string"
+      country:
+        type: "string"
+      city:
+        type: "string"
+      street:
+        type: "string"
+      number:
+        type: "string"
+      gender:
+        type: "string"
+      
+        
+  UserInput:
+    type: "object"
+    properties:
+      cpf:
+        type: "string"
+      username:
+        type: "string"
+      firstName:
+        type: "string"
+      lastName:
+        type: "string"
+      email:
+        type: "string"
+      password:
+        type: "string"
+      phone:
+        type: "string"
+      birthday:
+        type: "string"
+      postalCode: 
+        type: "string"
+      country:
+        type: "string"
+      city:
+        type: "string"
+      street:
+        type: "string"
+      number:
+        type: "string"
+      gender:
+        type: "string"
+  
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"
